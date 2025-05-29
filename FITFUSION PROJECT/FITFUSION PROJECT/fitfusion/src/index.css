@@ -1,0 +1,87 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 227 17% 14%;
+    --foreground: 0 0% 98%;
+
+    --card: 227 17% 18%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 227 17% 14%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 24 94% 53%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 199 94% 48%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 227 10% 25%;
+    --muted-foreground: 240 5% 84.9%;
+
+    --accent: 154 80% 40%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 227 17% 24%;
+    --input: 227 17% 24%;
+    --ring: 24 94% 53%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  
+  .fitness-gradient {
+    @apply bg-gradient-to-br from-fitOrange to-fitPurple;
+  }
+  
+  .fitness-card {
+    @apply bg-card border border-border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300;
+  }
+  
+  .fitness-btn {
+    @apply inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:opacity-50 disabled:pointer-events-none;
+  }
+  
+  .fitness-btn-primary {
+    @apply fitness-btn bg-fitOrange text-white hover:bg-orange-600 px-6 py-3;
+  }
+  
+  .fitness-btn-secondary {
+    @apply fitness-btn bg-fitBlue text-white hover:bg-blue-600 px-6 py-3;
+  }
+  
+  .fitness-btn-outline {
+    @apply fitness-btn border border-fitOrange text-fitOrange hover:bg-fitOrange hover:text-white px-6 py-3;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
